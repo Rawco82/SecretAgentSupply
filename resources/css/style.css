@@ -25,6 +25,25 @@ div {
   padding: 12px 0 12px 0.5em;
 }
 
+
+@media only screen and (min-width: 480px) and (max-width: 760px) {
+  .headline h4 {
+    font-size: 0.89rem;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 760px) {
+  .headline h1 {
+    font-size: .89em;
+  }
+}
+
+/* @media only screen and (max-width: 480px) {
+  .container span {
+    display: none;
+  }
+}  */
+
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -34,6 +53,12 @@ div {
   height: 1.5em;
   padding-right: 15px;
 }
+
+/* @media only screen and (max-width: 480px) {
+  .company img {
+    margin: auto;
+  }
+} */
 
 img {
   border-style: none;
@@ -45,7 +70,12 @@ img {
   background-position: center;
   background-size: cover;
   height: 25em;
+  /* display: flex; */
 }
+
+/* .container .headline {
+  display: flex;
+} */
 
 .headline {
   color: white;
@@ -56,15 +86,46 @@ img {
   top: 9em;
 }
 
+/* @media only screen and (max-width: 480px) {
+  .headline {
+    width: 100%;
+    padding: 1em 2em;
+    top: 15em;
+  }
+} */
+
 h1, h4 {
   font-weight: bold;
 }
 
+/* @media only screen and (max-width: 480px) {
+  h1, h4 {
+    font-weight: bold;
+  }
+} */
+
+/*@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 0.77rem;
+  }
+} */
+
 .headline h1 {
-  font-size: 2em;
+  font-size: 2rem;
   line-height: 1.2em;
   margin: 0.25em 0;
-}
+ }
+
+  /* @media only screen and (max-width: 480px) {
+  .headline h1 {
+    font-size: 1rem;
+    margin: 0.5rem 2rem;
+  }
+  .headline h4 {
+    font-size: 0.75rem;
+    margin: 0.5rem 2rem;
+  }
+} */
 
 nav {
   background-color: firebrick;
@@ -88,7 +149,6 @@ nav ul {
   nav ul {
     display: none;
   }
-
 }
 
 @media only screen and (max-width: 1024px) {
@@ -108,11 +168,26 @@ li {
   margin: 3em 0 0 0;
 }
 
+/* @media only screen and (min-width: 768px) and (max-width: 1024px)
+  and (orientation: landscape) {
+  .products, .business-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 3em 0 0 0;
+  }
+} */
+
 @media only screen and (max-width: 1024px) {
   .product {
     width: 47%;
   }
 }
+
+  /* @media only screen and (max-width: 480px) {
+   {
+    ;
+  }
+} */
 
 .product-image {
   border: 4px solid black;
@@ -144,6 +219,18 @@ img {
     display: none;
   }
 }
+
+/* @media only screen and (max-width: 480px) {
+   .product.watch {
+    display: none;
+  } */
+
+/* @media only screen and (max-width: 480px) {
+ .product {
+    width: 90%;
+    margin-left: 15px;
+  }
+} */
 
 .info {
   width: 35%;
