@@ -1,7 +1,18 @@
+/* Default Styles */
+
+html {
+  font-size: 18px;
+  background-color: white;
+}
+
 body {
   font-family: Helvetica, sans-serif;
   line-height: 1.4em;
   margin: 0;
+}
+
+h1, h4 {
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -10,9 +21,7 @@ body {
   }
 }
 
-div {
-  display: block;
-}
+/* Company Header */
 
 .company {
   background-color: black;
@@ -25,44 +34,12 @@ div {
   padding: 12px 0 12px 0.5em;
 }
 
-
-@media only screen and (min-width: 480px) and (max-width: 760px) {
-  .headline h4 {
-    font-size: 0.89rem;
-  }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 760px) {
-  .headline h1 {
-    font-size: .89em;
-  }
-}
-
-/* @media only screen and (max-width: 480px) {
-  .container span {
-    display: none;
-  }
-}  */
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
 .company img {
   height: 1.5em;
   padding-right: 15px;
 }
 
-/* @media only screen and (max-width: 480px) {
-  .company img {
-    margin: auto;
-  }
-} */
-
-img {
-  border-style: none;
-}
+/* Main Banner */
 
 .main-banner {
   background-image: url("../images/moto.jpeg");
@@ -70,12 +47,7 @@ img {
   background-position: center;
   background-size: cover;
   height: 25em;
-  /* display: flex; */
 }
-
-/* .container .headline {
-  display: flex;
-} */
 
 .headline {
   color: white;
@@ -86,51 +58,47 @@ img {
   top: 9em;
 }
 
-/* @media only screen and (max-width: 480px) {
+.headline h1 {
+  font-size: 2em;
+  line-height: 1.2em;
+  margin: 0.25em 0;
+}
+
+@media only screen and (max-width: 470px) {
+  .main-banner {
+    height: 17em;
+  }
+
   .headline {
     width: 100%;
     padding: 1em 2em;
-    top: 15em;
+    top: 10em;
   }
-} */
 
-h1, h4 {
-  font-weight: bold;
-}
-
-/* @media only screen and (max-width: 480px) {
-  h1, h4 {
-    font-weight: bold;
+  .headline h4 {
+    font-size: .77rem;
   }
-} */
 
-/*@media only screen and (max-width: 480px) {
-  h1 {
-    font-size: 0.77rem;
-  }
-} */
-
-.headline h1 {
-  font-size: 2rem;
-  line-height: 1.2em;
-  margin: 0.25em 0;
- }
-
-  /* @media only screen and (max-width: 480px) {
   .headline h1 {
     font-size: 1rem;
-    margin: 0.5rem 2rem;
   }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 760px) {
   .headline h4 {
-    font-size: 0.75rem;
-    margin: 0.5rem 2rem;
-  }
-} */
+     font-size: 0.89rem;
+   }
+
+  .headline h1 {
+     font-size: .89em;
+   }
+ }
+
+/* Navigation Bar */
 
 nav {
   background-color: firebrick;
   color: white;
-  display: block;
 }
 
 nav ul {
@@ -158,9 +126,7 @@ nav ul {
   }
 }
 
-li {
-  display: list-item;
-}
+/* Products and Business Information Section */
 
 .products, .business-info {
   display: flex;
@@ -168,30 +134,13 @@ li {
   margin: 3em 0 0 0;
 }
 
-/* @media only screen and (min-width: 768px) and (max-width: 1024px)
-  and (orientation: landscape) {
-  .products, .business-info {
-  display: flex;
-  justify-content: space-between;
-  margin: 3em 0 0 0;
-  }
-} */
-
-@media only screen and (max-width: 1024px) {
-  .product {
-    width: 47%;
-  }
+.product {
+  width: 30%;
 }
-
-  /* @media only screen and (max-width: 480px) {
-   {
-    ;
-  }
-} */
 
 .product-image {
   border: 4px solid black;
-  padding: 2em 5em;
+  padding: 2em 0;
   height: 9em;
   display: flex;
   justify-content: center;
@@ -202,10 +151,6 @@ li {
   max-width: 8em;
 }
 
-img {
-  border-style: none;
-}
-
 .description {
   display: block;
   background-color: black;
@@ -213,24 +158,6 @@ img {
   text-align: center;
   padding: 0.5em;
 }
-
-@media only screen and (max-width: 1024px) {
-  .product.glasses {   /* try with a space if needed */
-    display: none;
-  }
-}
-
-/* @media only screen and (max-width: 480px) {
-   .product.watch {
-    display: none;
-  } */
-
-/* @media only screen and (max-width: 480px) {
- .product {
-    width: 90%;
-    margin-left: 15px;
-  }
-} */
 
 .info {
   width: 35%;
@@ -243,10 +170,47 @@ img {
   padding: 1em 2em;
 }
 
+@media only screen and (max-width: 1024px) {
+  .product {
+    width: 47%;
+  }
+  .product.glasses {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .products,
+  .business-info {
+    flex-wrap: wrap;
+  }
+
+  .product {
+    width: 90%;
+    margin: auto;
+  }
+
+  .product.watch {
+  display: none;
+  }
+
+  .info {
+    width: 90%;
+    margin: 0.5em auto;
+  }
+}
+/* Footer */
+
 footer {
   background-color: black;
   color: white;
   padding: 5em 0;
   margin-top: 4em;
   display: block;
+}
+
+@media only screen and (max-width: 470px) {
+  footer {
+    text-align: center;
+  }
 }
